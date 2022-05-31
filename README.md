@@ -23,7 +23,7 @@ To clone this project:
 
 ### Prerequisites
 - Code editor
-- Knowledge in HTML and CSS
+- Knowledge in HTML, CSS and Javascript
 -Git
 
 ### Setup
