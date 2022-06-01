@@ -1,7 +1,7 @@
 {
   "name": "awesome_books_with_es6",
   "version": "1.0.0",
-  "description": "",
+  "description": "> This is awesome books poject using ES6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/kiboma2021/Awesome_books_with_ES6/issues"
   },
-  "homepage": "https://github.com/kiboma2021/Awesome_books_with_ES6#readme"
+  "homepage": "https://github.com/kiboma2021/Awesome_books_with_ES6#readme",
+  "dependencies": {
+    "luxon": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.30.0"
+  }
 }
