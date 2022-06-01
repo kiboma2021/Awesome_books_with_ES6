@@ -2,7 +2,11 @@
 
 // Extracted function from lesson
 
-import 
+import BookManager from "./modules/booksManager.js"
+import resetInput from "./modules/resetInput.js"
+import displayBook from "./modules/display.js"
+import displaySection from "./modules/displaySelection.js"
+
 function storageAvailable(type) {
   let storage;
   try {
@@ -35,63 +39,8 @@ const bookAuthor = document.getElementById('author');
 const addBtn = document.getElementById('add');
 let books;
 
-
-
 const library = new BookManager();
 
-function displayBook(title, author, id) {
-  // Book list container
-  const bookContainer = document.querySelector('.col-1');
-
-  // Book container
-  const bkdiv = document.createElement('div');
-  bkdiv.classList.add('flex');
-
-  // book-details container
-  const bkdetails = document.createElement('div');
-  bkdetails.classList.add('bk-details');
-  bkdiv.appendChild(bkdetails);
-
-  // Title of the book
-  const addTitle = document.createElement('h2');
-  addTitle.textContent = `"${title}"`;
-  bkdetails.appendChild(addTitle);
-
-  // paragraph insertion
-
-  const paragraph = document.createElement('p');
-  bkdetails.appendChild(paragraph);
-  paragraph.innerText = 'by';
-
-  // Author of the book
-  const addAuthor = document.createElement('p');
-  addAuthor.innerHTML = author;
-  bkdetails.appendChild(addAuthor);
-
-  // btn-details container
-  const btnDiv = document.createElement('div');
-  btnDiv.classList.add('btn-details');
-  bkdiv.appendChild(btnDiv);
-
-  // Remove Button
-  const rmBtn = document.createElement('button');
-  rmBtn.textContent = 'Remove';
-  rmBtn.classList.add('rmbtn');
-  rmBtn.id = id;
-  rmBtn.addEventListener('click', library.removeBook);
-  btnDiv.appendChild(rmBtn);
-
-  // Parting line
-  // const hr = document.createElement('hr');
-  // bkdiv.appendChild(hr);
-
-  bookContainer.appendChild(bkdiv);
-}
-
-function resetInput() {
-  bookName.value = '';
-  bookAuthor.value = '';
-}
 
 if (storageAvailable('localStorage')) {
   window.addEventListener('load', () => {
@@ -111,26 +60,6 @@ if (storageAvailable('localStorage')) {
 
 // Menu links
 const menuBtns = document.querySelectorAll('.menuBtn');
-// Sections
-const allBooks = document.querySelector('.all-books');
-const addingBook = document.querySelector('.adding-book');
-const contact = document.querySelector('.contact');
-
-function displaySection(e) {
-  if (e.target.id === 'display-list') {
-    allBooks.style.display = 'block';
-    addingBook.style.display = 'none';
-    contact.style.display = 'none';
-  } else if (e.target.id === 'display-form') {
-    allBooks.style.display = 'none';
-    addingBook.style.display = 'block';
-    contact.style.display = 'none';
-  } else {
-    allBooks.style.display = 'none';
-    addingBook.style.display = 'none';
-    contact.style.display = 'block';
-  }
-}
 
 menuBtns.forEach((btn) => {
   btn.addEventListener('click', displaySection);
