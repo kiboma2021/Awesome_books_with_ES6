@@ -3,7 +3,7 @@ const allBooks = document.querySelector('.all-books');
 const addingBook = document.querySelector('.adding-book');
 const contact = document.querySelector('.contact');
 
-export default function displaySection(e) {
+let displaySection = e => {
   if (e.target.id === 'display-list') {
     allBooks.style.display = 'block';
     addingBook.style.display = 'none';
@@ -18,3 +18,4 @@ export default function displaySection(e) {
     contact.style.display = 'block';
   }
 }
+export default displaySection;
