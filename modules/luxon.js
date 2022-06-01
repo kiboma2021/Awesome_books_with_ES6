@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
 // these aren't really private, but nor are they really useful to document
 
 /**
@@ -4253,7 +4255,7 @@ const numberingSystemsUTF16 = {
   tibt: [3872, 3881],
 };
 
-const hanidecChars = numberingSystems.hanidec.replace(/[\[|\]]/g, "").split("");
+const hanidecChars = numberingSystems.hanidec.replace(/[\\[|\]]/g, "").split("");
 
 function parseDigits(str) {
   let value = parseInt(str, 10);
