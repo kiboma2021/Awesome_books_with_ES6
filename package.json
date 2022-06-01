@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kiboma2021/Awesome_books_with_ES6/issues"
   },
-  "homepage": "https://github.com/kiboma2021/Awesome_books_with_ES6#readme"
+  "homepage": "https://github.com/kiboma2021/Awesome_books_with_ES6#readme",
+  "dependencies": {
+    "luxon": "^2.4.0"
+  }
 }

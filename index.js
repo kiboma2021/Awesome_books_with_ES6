@@ -7,6 +7,8 @@ import { resetInput } from "./modules/resetInput.js"
 import displayBook from "./modules/display.js"
 import displaySection from "./modules/displaySelection.js"
 import { storageAvailable } from "./modules/storage.js"
+import { DateTime } from "./modules/luxon.js";
+
 
 const bookName = document.getElementById('name');
 const bookAuthor = document.getElementById('author');
@@ -40,14 +42,5 @@ menuBtns.forEach((btn) => {
 
 // Adding date
 const dateContainer = document.querySelector('#date');
-
-const date = new Date();
-
-const year = date.getFullYear();
-const month = date.toLocaleString('default', { month: 'long' });
-const day = date.getDate();
-const hour = date.getHours();
-const minutes = date.getMinutes();
-const seconds = date.getSeconds();
-
-dateContainer.textContent = `${month} ${day} ${year}, ${hour}:${minutes}:${seconds}`;
+const timeNow = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+dateContainer.textContent = `${timeNow};
