@@ -42,5 +42,6 @@ menuBtns.forEach((btn) => {
 
 // Adding date
 const dateContainer = document.querySelector('#date');
-const timeNow = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
-dateContainer.textContent = `${timeNow};
+const date_today = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+dateContainer.textContent = `${date_today}`;
+
