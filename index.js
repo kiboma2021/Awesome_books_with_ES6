@@ -3,7 +3,7 @@
 // Extracted function from lesson
 
 import BookManager from "./modules/booksManager.js"
-import resetInput from "./modules/resetInput.js"
+import { resetInput } from "./modules/resetInput.js"
 import displayBook from "./modules/display.js"
 import displaySection from "./modules/displaySelection.js"
 import { storageAvailable } from "./modules/storage.js"
