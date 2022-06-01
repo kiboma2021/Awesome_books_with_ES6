@@ -1,5 +1,5 @@
 
-export function storageAvailable(type) {
+export let storageAvailable = type => {
   let storage;
   try {
     const x = '__storage_test__';
