@@ -17,7 +17,7 @@ class BookManager {
 const library = new BookManager();
 
 
-export default function displayBook(title, author, id) {
+let displayBook = (title, author, id) => {
   // Book list container
   const bookContainer = document.querySelector('.col-1');
 
@@ -65,3 +65,5 @@ export default function displayBook(title, author, id) {
 
   bookContainer.appendChild(bkdiv);
 }
+
+export default displayBook;
